@@ -26,7 +26,7 @@ const setActiveTab = (tab) => {
         <div class="pt-9 pr-9">
             <button 
               @click="setActiveTab('police')" 
-              class="btn py-6 text-neutral-950" 
+              class="btn py-6 text-neutral-950 inline-flex items-center cursor-pointer rounded transition-colors duration-300 ease-in-out" 
               :class="activeTab === 'police' ? 'bg-blue-500 text-white' : 'bg-zinc-300'">
               <span class="flex text-black">ລາຍງານຂໍ້ມູນຕໍາຫຼວດ <listicon /></span>
             </button>
@@ -34,7 +34,7 @@ const setActiveTab = (tab) => {
         <div class="p-9">
             <button 
               @click="setActiveTab('offender')" 
-              class="btn py-6 text-neutral-950" 
+              class="btn py-6 text-neutral-950 inline-flex items-center cursor-pointer rounded transition-colors duration-300 ease-in-out" 
               :class="activeTab === 'offender' ? 'bg-blue-500 text-white' : 'bg-zinc-300'">
               <span class="flex text-black">ລາຍງານຂໍ້ມູນຜູ້ລະເມີດ <listicon /></span>
             </button>
@@ -42,7 +42,7 @@ const setActiveTab = (tab) => {
         <div class="p-9">
             <button 
               @click="setActiveTab('payment')" 
-              class="btn py-6 text-neutral-950" 
+              class="btn py-6 text-neutral-950 inline-flex items-center cursor-pointer rounded transition-colors duration-300 ease-in-out" 
               :class="activeTab === 'payment' ? 'bg-blue-500 text-white' : 'bg-zinc-300'">
               <span class="flex text-black">ລາຍງານຂໍ້ມູນການຊໍາລະ <listicon /></span>
             </button>
@@ -50,7 +50,7 @@ const setActiveTab = (tab) => {
         <div class="p-9">
             <button 
               @click="setActiveTab('income')" 
-              class="btn py-6 text-neutral-950" 
+              class="btn py-6 text-neutral-950 inline-flex items-center cursor-pointer rounded transition-colors duration-300 ease-in-out" 
               :class="activeTab === 'income' ? 'bg-blue-500 text-white' : 'bg-zinc-300'">
               <span class="flex text-black">ລາຍງານຂໍ້ມູນລາຍຮັບ <listicon /></span>
             </button>
@@ -58,7 +58,7 @@ const setActiveTab = (tab) => {
         <div class="p-9">
             <button 
               @click="setActiveTab('fines')" 
-              class="btn py-6 text-neutral-950" 
+              class="btn py-6 text-neutral-950 inline-flex items-center cursor-pointer rounded transition-colors duration-300 ease-in-out" 
               :class="activeTab === 'fines' ? 'bg-blue-500 text-white' : 'bg-zinc-300'">
               <span class="flex text-black">ລາຍງານຂໍ້ມູນການປັບໄໝ <listicon /></span>
             </button>
@@ -78,12 +78,4 @@ const setActiveTab = (tab) => {
 
 
 <style scoped>
-.tab {
-  display: inline-flex;
-  align-items: center;
-  padding: 1.5rem;
-  cursor: pointer;
-  border-radius: 0.25rem;
-  transition: background-color 0.3s ease;
-}
 </style>

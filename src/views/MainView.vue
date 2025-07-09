@@ -69,17 +69,6 @@ const setActiveTab = (tab) => {
                 <div class="hidden xl:flex justify-start px-6 py-6 items-center space-x-3 group">
                     <a role="tab" 
                        class="tab text-xl text-white transition-all duration-300 ease-in-out hover:text-blue-200 hover:translate-x-2 relative" 
-                       :class="{ 'text-blue-200 before:absolute before:left-[-1rem] before:top-1/2 before:-translate-y-1/2 before:w-1 before:h-[70%] before:bg-blue-200 before:rounded': activeTab === 'table2' }" 
-                       @click="setActiveTab('table2')">
-                       <span class="text-white">
-                        ຜູ້ລະເມີດ
-                        </span>
-                    </a>
-                </div>
-                
-                <div class="hidden xl:flex justify-start px-6 py-6 items-center space-x-3 group">
-                    <a role="tab" 
-                       class="tab text-xl text-white transition-all duration-300 ease-in-out hover:text-blue-200 hover:translate-x-2 relative" 
                        :class="{ 'text-blue-200 before:absolute before:left-[-1rem] before:top-1/2 before:-translate-y-1/2 before:w-1 before:h-[70%] before:bg-blue-200 before:rounded': activeTab === 'report' }" 
                        @click="setActiveTab('report')">
                        <span class="text-white">
@@ -116,9 +105,6 @@ const setActiveTab = (tab) => {
                 <div class="p-8">
                     <div v-if="activeTab === 'new'">
                         <New />
-                    </div>
-                    <div v-if="activeTab === 'table2'">
-                        <table2 />
                     </div>
                     <div v-if="activeTab === 'report'">
                         <Report />
