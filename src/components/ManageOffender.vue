@@ -272,13 +272,13 @@ const formatCurrency = (amount: number) => {
                                 :disabled="!payment.hasImage"
                                 class="bg-sky-500 hover:bg-sky-600 disabled:bg-gray-300 disabled:cursor-not-allowed text-white p-2 rounded-lg transition-colors flex items-center justify-center gap-2">
                                 <imageicon class="w-4 h-4" />
-                                <span class="text-xs">ຮູບ</span>
+                                <span class="text-xs text-white">ຮູບ</span>
                             </button>
                             <button 
                                 @click="viewDetails(payment)"
                                 class="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-lg transition-colors flex items-center justify-center gap-2">
                                 <inforicon class="w-4 h-4" />
-                                <span class="text-xs">ລາຍລະອຽດ</span>
+                                <span class="text-xs text-white">ລາຍລະອຽດ</span>
                             </button>
                             
                             <!-- Bottom Row - Only show for pending/review status -->
@@ -287,13 +287,13 @@ const formatCurrency = (amount: number) => {
                                     @click="rejectPayment(payment)"
                                     class="bg-red-500 hover:bg-red-600 text-white p-2 rounded-lg transition-colors flex items-center justify-center gap-2">
                                     <nosymboi class="w-4 h-4" />
-                                    <span class="text-xs">ປະຕິເສດ</span>
+                                    <span class="text-xs text-white">ປະຕິເສດ</span>
                                 </button>
                                 <button 
                                     @click="approvePayment(payment)"
                                     class="bg-green-500 hover:bg-green-600 text-white p-2 rounded-lg transition-colors flex items-center justify-center gap-2">
                                     <yessyboi class="w-4 h-4" />
-                                    <span class="text-xs">ອະນຸມັດ</span>
+                                    <span class="text-xs text-white">ອະນຸມັດ</span>
                                 </button>
                             </template>
                             <!-- Status message for completed actions -->

@@ -262,20 +262,20 @@ const getStatusText = (status: string) => {
                             <button 
                                 @click="viewDetails(police)"
                                 class="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition-colors">
-                                ເບິ່ງລາຍລະອຽດ
+                                <span class="text-white">ເບິ່ງລາຍລະອຽດ</span>
                             </button>
                             
                             <!-- Management Actions (only for pending status) -->
                             <div v-if="police.status === 'pending'" class="grid grid-cols-2 gap-2">
                                 <button 
                                     @click="rejectPolice(police)"
-                                    class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-lg transition-colors text-sm">
-                                    ປະຕິເສດ
+                                    class="bg-red-500 hover:bg-red-700 text-white py-2 px-4 rounded-lg transition-colors text-sm">
+                                    <span class="text-white">ປະຕິເສດ</span>
                                 </button>
                                 <button 
                                     @click="approvePolice(police)"
                                     class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg transition-colors text-sm">
-                                    ອະນຸມັດ
+                                    <span class="text-white">ອະນຸມັດ</span>
                                 </button>
                             </div>
                             
@@ -284,7 +284,7 @@ const getStatusText = (status: string) => {
                                 <button 
                                     @click="suspendPolice(police)"
                                     class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded-lg transition-colors text-sm">
-                                    ລະງັບ
+                                    <span class="text-white">ລະງັບ</span>
                                 </button>
                             </div>
                             
@@ -318,10 +318,11 @@ const getStatusText = (status: string) => {
             <div class="bg-white p-8 rounded-2xl shadow-2xl max-w-2xl w-full mx-4">
                 <div class="flex justify-between items-center mb-6">
                     <h3 class="text-2xl font-bold text-neutral-800">ລາຍລະອຽດເຈົ້າໜ້າທີ່</h3>
-                    <button @click="closePopup" class="text-neutral-400 hover:text-neutral-600 transition-colors">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
+                    <button @click="closePopup" class="text-black hover:text-neutral-600 transition-colors">
+                            <span class="text-black"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </span>
                     </button>
                 </div>
                 

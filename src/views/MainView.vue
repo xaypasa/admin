@@ -4,7 +4,8 @@ import { RouterView } from 'vue-router'
 import RegisterView from './RegisterView.vue'
 import LoginView from '@/components/LoginView.vue'
 import AboutView from './AboutView.vue'
-import New from '@/components/New.vue'
+import ManageLegal from '@/components/ManageLegal.vue'
+import ManageDecree from '@/components/ManageDecree.vue'
 import ManageOffender from '@/components/ManageOffender.vue'
 import ManagePolice from '@/components/ManagePolice.vue'
 import Report from '@/components/Report.vue'
@@ -58,8 +59,8 @@ const setActiveTab = (tab) => {
                 <div class="hidden xl:flex justify-start px-6 py-6 items-center space-x-3 group">
                     <a role="tab" 
                        class="tab text-xl text-white transition-all duration-300 ease-in-out hover:text-blue-200 hover:translate-x-2 relative" 
-                       :class="{ 'text-blue-200 before:absolute before:left-[-1rem] before:top-1/2 before:-translate-y-1/2 before:w-1 before:h-[70%] before:bg-blue-200 before:rounded': activeTab === 'new' }" 
-                       @click="setActiveTab('new')">
+                       :class="{ 'text-blue-200 before:absolute before:left-[-1rem] before:top-1/2 before:-translate-y-1/2 before:w-1 before:h-[70%] before:bg-blue-200 before:rounded': activeTab === 'ManageLegal' }" 
+                       @click="setActiveTab('ManageLegal')">
                        <span class="text-white">
                         ດຳລັດ
                        </span>
@@ -103,8 +104,8 @@ const setActiveTab = (tab) => {
             <!-- Dynamic Content Section -->
             <div class="flex-1 ml-64 min-h-screen bg-neutral-50">
                 <div class="p-8">
-                    <div v-if="activeTab === 'new'">
-                        <New />
+                    <div v-if="activeTab === 'ManageLegal'">
+                        <ManageLegal />
                     </div>
                     <div v-if="activeTab === 'report'">
                         <Report />

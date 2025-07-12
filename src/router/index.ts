@@ -9,6 +9,7 @@ import Licence_card from '../components/Licence_card.vue'
 import Payment from '../components/Payment.vue'
 import New from '../components/New.vue'
 import Table from '../components/Table.vue'
+import ManageDecree from '../components/ManageDecree.vue'
 
 
 const router = createRouter({
@@ -115,6 +116,12 @@ const router = createRouter({
       path: '/table',
       name: 'table',
       component: () => import('../components/Table.vue'),
+    },
+    {
+      path: '/manage-decree',
+      name: 'manage-decree',
+      component: ManageDecree,
+      meta: { requiresRole: 'admin' },
     },
     
   ],
